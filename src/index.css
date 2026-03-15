@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 10%;
 
-    --primary: 175 80% 40%;
+    --primary: 275 80% 50%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 15% 92%;
@@ -93,8 +93,8 @@
 
     --sidebar-background: 220 25% 8%;
     --sidebar-foreground: 210 20% 90%;
-    --sidebar-primary: 275 80% 50%;
-    --sidebar-primary-foreground: 220 25% 6%;
+    --sidebar-primary: 175 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 20% 15%;
     --sidebar-accent-foreground: 210 20% 90%;
     --sidebar-border: 220 20% 18%;
@@ -127,7 +127,7 @@
   }
 
   .bg-gradient-hero {
-    background: var(--navbg);
+    background: var(--gradient-hero);
   }
 
   .shadow-glow {

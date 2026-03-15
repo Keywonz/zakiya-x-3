@@ -30,12 +30,12 @@ export default function HeroSection() {
       {/* Background 3D */}
       <ThreeScene />
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
           
           {/* SISI KIRI: FOTO PROFIL */}
           <motion.div 
-            className="flex justify-center lg:justify-end order-1 lg:order-1"
+            className="flex-shrink-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8}}
@@ -45,11 +45,11 @@ export default function HeroSection() {
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary/40 to-purple-600/40 rounded-3xl blur-2xl opacity-50 animate-pulse"></div>
               
               {/* Bingkai Foto */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border -4">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-glow">
                 <img 
-                  src="/public/wonwoo blue.jpg" 
+                  src="/public/wonwoo cat.jpg" 
                   alt="Zakiya Profile"
-                  className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border -4"
+                  className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-glow"
                 />
               </div>
 
@@ -86,15 +86,17 @@ export default function HeroSection() {
               variants={itemVariants}
               className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
             >
-              zakiya <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">
-                zakiya portofolio
+              <br />
+              <span className="text-gradient">Zakiya Portofolio
               </span>
             </motion.h1>
 
             <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               variants={itemVariants}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground mb-8"
             >
               Saya adalah seorang pengembang aplikasi web yang fokus pada estetika 
               dan performa. Mari membangun sesuatu yang luar biasa bersama-sama.
