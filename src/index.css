@@ -64,7 +64,7 @@
     --popover: 220 25% 10%;
     --popover-foreground: 210 20% 98%;
 
-    --primary: 175 80% 50%;
+    --primary: 275 80% 50%;
     --primary-foreground: 220 25% 6%;
 
     --secondary: 220 20% 18%;
@@ -87,14 +87,14 @@
     --gradient-primary: linear-gradient(135deg, hsl(0 0% 71%), hsl(0 0% 100%));
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 71%) 0%, hsl(0 0% 100%));
     --navbg: linear-gradient(180deg, hsl(290 73% 52%) 0%, hsl(300 2% 17%) 100%);
-    --shadow-glow: 0 0 60px hsl(175 80% 50% / 0.4);
+    --shadow-glow: 0 0 60px hsl(281 81% 79% / 0.4);
     --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
     --shadow-card-hover: 0 8px 30px hsl(175 80% 50% / 0.15);
 
     --sidebar-background: 220 25% 8%;
     --sidebar-foreground: 210 20% 90%;
-    --sidebar-primary: 175 80% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 275 80% 50%;
+    --sidebar-primary-foreground: 220 25% 6%;
     --sidebar-accent: 220 20% 15%;
     --sidebar-accent-foreground: 210 20% 90%;
     --sidebar-border: 220 20% 18%;
@@ -127,7 +127,7 @@
   }
 
   .bg-gradient-hero {
-    background: var(--gradient-hero);
+    background: var(--navbg);
   }
 
   .shadow-glow {
