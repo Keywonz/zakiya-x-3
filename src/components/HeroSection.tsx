@@ -38,14 +38,14 @@ export default function HeroSection() {
             className="flex-shrink-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8}}
+            transition={{ duration: 0.8 }}
           >
             <div className="relative">
               {/* Efek Cahaya/Glow di belakang foto */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary/40 to-purple-600/40 rounded-3xl blur-2xl opacity-50 animate-pulse"></div>
               
               {/* Bingkai Foto */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-glow">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4">
                 <img 
                   src="/public/wonwoo cat.jpg" 
                   alt="Zakiya Profile"
@@ -124,22 +124,17 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Social Media Icons */}
-            <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-4">
-              {[
-                { icon: Github, href: '#', label: 'GitHub' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Youtube, href: '#', label: 'YouTube' },
-                { icon: Instagram, href: '#', label: 'Instagram' },
-              ].map((social) => (
+            <motion.div variants={itemVariants} className="flex items-center justify-center lg:justify-start gap-6">
+              {SocialLinks.map((social, index) => (
                 <motion.a
-                  key={social.label}
+                  key={index}
                   href={social.href}
-                  className="p-3 rounded-xl glass border border-white/5 hover:border-primary/50 hover:text-primary transition-all duration-300"
-                  whileHover={{ y: -5 }}
+                  className="p-3 rounded-full glass hover:shadow-glow transition-all duration-300"
+                  whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={social.label}
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon className="h-5 w-5 text-foreground" />
                 </motion.a>
               ))}
             </motion.div>
