@@ -1,42 +1,41 @@
-import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Youtube, Instagram } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import ThreeScene from './ThreeScene';
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Youtube, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import ThreeScene from "./ThreeScene";
 
 export default function HeroSection() {
   const scrollToAbout = () => {
-    const element = document.querySelector('#about');
+    const element = document.querySelector("#about");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero"
     >
       <ThreeScene />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
 
-          {/* FOTO DI KIRI */}
+          {/* FOTO KIRI */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex justify-center"
+            className="flex-shrink-0"
           >
             <img
-              src="/public/wonwoo cat.jpg" 
-              alt="Zakiya Profile"
+              src="/wonwoo cat.jpg"
+              alt="Zakiya profile"
               className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-glow"
             />
-          
           </motion.div>
 
-          {/* TEKS DI KANAN */}
+          {/* TEXT KANAN */}
           <div className="text-center md:text-left">
             <motion.span
               className="inline-block px-4 py-2 rounded-full glass text-sm font-medium text-primary mb-6"
@@ -44,7 +43,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
             >
-              
+              👋 Selamat datang di portfolio saya
             </motion.span>
 
             <motion.h1
@@ -53,9 +52,9 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="font-display text-4xl md:text-6xl font-bold mb-6"
             >
-              
+            
               <br />
-              <span className="text-gradient"> zakiya portofolio </span>
+              <span className="text-gradient">Zakiya portofolio</span>
             </motion.h1>
 
             <motion.p
@@ -73,14 +72,15 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4 mb-10"
+              className="flex flex-col sm:flex-row gap-4 mb-8"
             >
               <Button
                 size="lg"
                 className="rounded-full px-8 shadow-glow"
                 onClick={() => {
-                  const element = document.querySelector('#projects');
-                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  const element = document.querySelector("#projects");
+                  if (element)
+                    element.scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 Lihat Projects
@@ -91,8 +91,9 @@ export default function HeroSection() {
                 size="lg"
                 className="rounded-full px-8"
                 onClick={() => {
-                  const element = document.querySelector('#contact');
-                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  const element = document.querySelector("#contact");
+                  if (element)
+                    element.scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 Hubungi Saya
@@ -107,17 +108,20 @@ export default function HeroSection() {
               className="flex gap-6"
             >
               {[
-                { icon: Github, href: '#', label: 'GitHub' },
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                { icon: Youtube, href: '#', label: 'YouTube' },
-                { icon: Instagram, href: '#', label: 'Instagram' },
+                { icon: Github, href: "https://github.com/keywonz/", label: "GitHub" },
+                // { icon: Linkedin, href: "#", label: "LinkedIn" },
+                // { icon: Youtube, href: "#", label: "YouTube" },
+                // { icon: Instagram, href: "#", label: "Instagram" },
               ].map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 rounded-full glass hover:shadow-glow transition-all duration-300"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
+                  aria-label={social.label}
                 >
                   <social.icon className="h-5 w-5 text-foreground" />
                 </motion.a>
@@ -132,6 +136,7 @@ export default function HeroSection() {
         onClick={scrollToAbout}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 p-3 rounded-full glass animate-float cursor-pointer"
         whileHover={{ scale: 1.1 }}
+        aria-label="Scroll to About"
       >
         <ArrowDown className="h-5 w-5 text-primary" />
       </motion.button>
