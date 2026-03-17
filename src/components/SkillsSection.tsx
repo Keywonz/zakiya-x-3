@@ -1,21 +1,21 @@
 import { motion } from 'framer-motion';
 
-const skills = {
-  Frontend: [
+const Kemampuan = {
+  Akademik: [
     { name: 'Ilmu Hukum', level: 95 },
     { name: 'Studi Agama', level: 90 },
     { name: 'Public Speaking', level: 85 },
     { name: 'Penulisan Ilmiah', level: 90 },
     { name: 'Riset', level: 85 },
   ],
-  Backend: [
+  Atletik: [
     { name: 'Basket', level: 78 },
     { name: 'Kerjasama Tim', level: 85 },
     { name: 'Strategi Lapangan', level: 88 },
     { name: 'Disiplin Latihan', level: 90 },
     { name: 'Stamina Fisik', level: 90 }
   ],
-  Tools: [
+  SoftSkills: [
     { name: 'Kepemimpinan', level: 95 },
     { name: 'Manajemen Waktu', level: 80 },
     { name: 'Komunikasi', level: 85 },
@@ -50,7 +50,7 @@ function SkillBar({ name, level, delay }: { name: string; level: number; delay: 
   );
 }
 
-export default function SkillsSection() {
+export default function KemampuanSection() {
   return (
     <section id="skills" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -61,7 +61,7 @@ export default function SkillsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-medium mb-2 block">Akademik</span>
+          <span className="text-primary font-medium mb-2 block">Keahlian</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
             Skills &amp; Teknologi
           </h2>
@@ -69,7 +69,7 @@ export default function SkillsSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Frontend */}
+          {/* Akademik */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -79,18 +79,18 @@ export default function SkillsSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">🎨</span>
+                <span className="text-2xl">📚</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Frontend</h3>
+              <h3 className="font-display text-xl font-bold">Akademik</h3>
             </div>
             <div className="space-y-4">
-              {skills.Frontend.map((skill, index) => (
+              {Kemampuan.Akademik.map((skill, index) => (
                 <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
               ))}
             </div>
           </motion.div>
 
-          {/* Backend */}
+          {/* Atletik */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -98,14 +98,14 @@ export default function SkillsSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="p-6 glass rounded-2xl shadow-card hover:shadow-card-hover transition-shadow"
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap- mb-8">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">⚙️</span>
+                <span className="text-2xl">🏃</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Backend</h3>
+              <h3 className="font-display text-xl font-bold">Atletik</h3>
             </div>
             <div className="space-y-4">
-              {skills.Backend.map((skill, index) => (
+              {Kemampuan.Atletik.map((skill, index) => (
                 <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
               ))}
             </div>
@@ -121,12 +121,12 @@ export default function SkillsSection() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-xl bg-primary/10">
-                <span className="text-2xl">🛠️</span>
+                <span className="text-2xl">🌟</span>
               </div>
-              <h3 className="font-display text-xl font-bold">Tools</h3>
+              <h3 className="font-display text-xl font-bold">Soft Skills</h3>
             </div>
             <div className="space-y-4">
-              {skills.Tools.map((skill, index) => (
+              {Kemampuan.SoftSkills.map((skill, index) => (
                 <SkillBar key={skill.name} {...skill} delay={index * 0.1} />
               ))}
             </div>

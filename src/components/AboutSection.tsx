@@ -19,10 +19,10 @@ export default function AboutSection() {
       content2: "Dengan pengalaman lebih dari 5 tahun, saya telah membantu klien dalam mewujudkan ide ide mereka menjadi aplikasi web yang powerful. Saya selalu haus akan teknologi baru.",
       content3: "Saya fokus pada performa, keamanan, dan pengalaman pengguna (UX) yang luar biasa di setiap baris kode yang saya tulis.",
     },
-    {
-      title: "Visi & Misi",
-      content: "Menciptakan ekosistem digital yang inklusif melalui kode yang bersih dan edukasi teknologi yang mudah diakses oleh semua kalangan."
-    },
+    // {
+    //   title: "Visi & Misi",
+    //   content: "Menciptakan ekosistem digital yang inklusif melalui kode yang bersih dan edukasi teknologi yang mudah diakses oleh semua kalangan."
+    // },
     {
       title: "Tech Stack Utama",
       content: "Berfokus pada modern stack seperti React, Next.js, Node.js, dan Tailwind CSS untuk performa aplikasi yang optimal."
