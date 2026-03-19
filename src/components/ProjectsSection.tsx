@@ -10,16 +10,16 @@ const projects = [
     title: 'E-Commerce Platform',
     description: 'Platform e-commerce modern dengan fitur lengkap termasuk payment gateway, inventory management, dan analytics dashboard.',
     tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    image: '💳',
+    image: '/public/japan.jpg', // 2. GUNAKAN VARIABEL IMPORT
     color: 'from-blue-500/20 to-cyan-500/20',
     github: '#',
     demo: '#',
-  },
+  }
   {
     title: 'Learning Management System',
     description: 'Platform pembelajaran online dengan video streaming, quiz interaktif, dan progress tracking.',
     tags: ['Next.js', 'TypeScript', 'MongoDB', 'WebRTC'],
-    image: '📚',
+    image: '/public/pasta.jpg', 
     color: 'from-purple-500/20 to-pink-500/20',
     github: '#',
     demo: '#',
@@ -28,7 +28,7 @@ const projects = [
     title: 'AI Content Generator',
     description: 'Tool untuk generate konten menggunakan AI dengan integrasi berbagai model language.',
     tags: ['Python', 'FastAPI', 'OpenAI', 'React'],
-    image: '🤖',
+    image: '/public/juice.jpg',
     color: 'from-green-500/20 to-teal-500/20',
     github: '#',
     demo: '#',
@@ -37,7 +37,7 @@ const projects = [
     title: 'Video Editing Tutorial',
     description: 'Seri tutorial video editing dengan 100+ episode dan 10k+ subscribers.',
     tags: ['Premiere Pro', 'After Effects', 'YouTube'],
-    image: '🎬',
+    image:'/public/cherry.jpg',
     color: 'from-red-500/20 to-orange-500/20',
     isContent: true,
     youtube: '#',
@@ -46,7 +46,7 @@ const projects = [
     title: 'Coding Tips & Tricks',
     description: 'Konten tips programming dan best practices untuk developer Indonesia.',
     tags: ['Instagram', 'TikTok', 'YouTube Shorts'],
-    image: '💡',
+    image: '/public/yellow.jpg',
     color: 'from-cyan-500/20 to-blue-500/20',
     isContent: true,
     youtube: '#',
@@ -54,7 +54,6 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
-  // Inisialisasi Embla dengan Loop dan Autoplay 3 detik
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: 'start' }, 
     [Autoplay({ delay: 3000, stopOnInteraction: false })]
@@ -80,7 +79,7 @@ export default function ProjectsSection() {
           className="text-center mb-16"  
         >
           <span className="text-primary font-medium mb-2 block">Portfolio</span>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 text-foreground">
             Projects & Karya
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
@@ -88,7 +87,6 @@ export default function ProjectsSection() {
 
         {/* Carousel Container */}
         <div className="relative max-w-7xl mx-auto">
-          {/* Viewport */}
           <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
             <div className="flex">
               {projects.map((project) => (
@@ -97,8 +95,15 @@ export default function ProjectsSection() {
                   className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-3"
                 >
                   <div className="h-full p-6 glass rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 border border-white/10 bg-white/5 backdrop-blur-sm">
-                    <div className={`aspect-video rounded-xl mb-4 flex items-center justify-center bg-gradient-to-br ${project.color}`}>
-                      <span className="text-6xl">{project.image}</span>
+                    
+                    {/* 3. BAGIAN DISPLAY GAMBAR */}
+                    <div className={`aspect-video rounded-xl mb-4 overflow-hidden flex items-center justify-center bg-gradient-to-br ${project.color}`}>
+                      <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        loading="lazy"
+                      />
                     </div>
 
                     <div className="space-y-3">
@@ -108,7 +113,7 @@ export default function ProjectsSection() {
                             Content
                           </span>
                         )}
-                        <h3 className="font-display text-lg font-bold truncate">
+                        <h3 className="font-display text-lg font-bold truncate text-foreground">
                           {project.title}
                         </h3>
                       </div>
@@ -130,7 +135,7 @@ export default function ProjectsSection() {
 
                       <div className="flex gap-2 pt-4">
                         {project.github && (
-                          <Button variant="outline" size="sm" className="rounded-full h-8 text-xs" asChild>
+                          <Button variant="outline" size="sm" className="rounded-full h-8 text-xs border-primary/20" asChild>
                             <a href={project.github} target="_blank" rel="noreferrer">
                               <Github className="h-3 w-3 mr-1" />
                               Code
@@ -161,12 +166,12 @@ export default function ProjectsSection() {
             </div>
           </div>
 
-          {/* Manual Navigation Buttons */}
+          {/* Navigation Buttons */}
           <div className="flex justify-center gap-4 mt-10">
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full border-primary/20 hover:bg-primary hover:text-white transition-colors"
+              className="rounded-full border-primary/20 hover:bg-primary hover:text-white transition-colors bg-transparent"
               onClick={scrollPrev}
             >
               <ChevronLeft className="h-5 w-5" />
@@ -174,7 +179,7 @@ export default function ProjectsSection() {
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full border-primary/20 hover:bg-primary hover:text-white transition-colors"
+              className="rounded-full border-primary/20 hover:bg-primary hover:text-white transition-colors bg-transparent"
               onClick={scrollNext}
             >
               <ChevronRight className="h-5 w-5" />

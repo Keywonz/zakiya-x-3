@@ -29,7 +29,7 @@ export default function HeroSection() {
             className="flex-shrink-0"
           >
             <img
-              src="/wonwoo cat.jpg"
+              src="/public/wonwoo.jpg"
               alt="Zakiya profile"
               className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-primary shadow-glow"
             />
@@ -54,7 +54,7 @@ export default function HeroSection() {
             >
             
               <br />
-              <span className="text-gradient">Zakiya portofolio</span>
+              <span className="text-gradient">zakiya portofolio</span>
             </motion.h1>
 
             <motion.p
