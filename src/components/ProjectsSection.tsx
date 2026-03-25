@@ -14,7 +14,7 @@ const projects = [
     color: 'from-blue-500/20 to-cyan-500/20',
     github: '#',
     demo: '#',
-  }
+  },
   {
     title: 'Learning Management System',
     description: 'Platform pembelajaran online dengan video streaming, quiz interaktif, dan progress tracking.',
