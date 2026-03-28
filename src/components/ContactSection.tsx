@@ -97,11 +97,11 @@ export default function ContactSection() {
 return (
   <section
     id="contact"
-    className="relative py-20 md:py-32 bg-gradient-to-br from-purple-200 via-pink-100 to-blue-200 overflow-hidden"
+    className="relative py-20 md:py-32 bg-gradient-to-br from-red-200 via-yellow-100 to-green-200 overflow-hidden"
   >
     {/* 🌸 Glow Background */}
-    <div className="absolute top-10 left-10 w-72 h-72 bg-purple-400 blur-3xl opacity-30 rounded-full"></div>
-    <div className="absolute bottom-10 right-10 w-72 h-72 bg-pink-400 blur-3xl opacity-30 rounded-full"></div>
+    <div className="absolute top-10 left-10 w-72 h-72 bg-red-400 blur-3xl opacity-30 rounded-full"></div>
+    <div className="absolute bottom-10 right-10 w-72 h-72 bg-yellow-400 blur-3xl opacity-30 rounded-full"></div>
 
     <div className="container mx-auto px-4 relative z-10">
 
@@ -114,11 +114,11 @@ return (
       >
         <span className="text-primary font-medium mb-2 block">Kontak</span>
 
-        <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+        <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent">
           Hubungi Saya
         </h2>
 
-        <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
+        <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-yellow-500 mx-auto rounded-full" />
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -152,7 +152,7 @@ return (
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="flex items-center gap-4 p-4 bg-white/80 backdrop-blur-lg rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition-all group"
               >
-                <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-yellow-500 to-red-500 text-white">
                   <info.icon className="h-5 w-5" />
                 </div>
                 <div>
@@ -208,7 +208,7 @@ return (
 
             <Button
               type="submit"
-              className="w-full rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105 transition-all"
+              className="w-full rounded-full bg-gradient-to-r from-yellow-500 to-red-500 text-white hover:scale-105 transition-all"
             >
               <Send className="h-4 w-4 mr-2" />
               Kirim Pesan 💌
